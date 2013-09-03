@@ -1,0 +1,13 @@
+<div class="article-index">
+  <%= @article.title %>
+  <hr />
+  <%= @article.description %>
+  <hr />
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <a href='<%= "/tag/#{tag.name}/articles" %>'><%= tag.name %></a>
+  <% end %>
+  <hr />
+  Category:
+    <a href='<%= "/categories/#{@article.categories.first.name}/articles" %>'><%= @article.categories.first.name %></a>
+</div>
